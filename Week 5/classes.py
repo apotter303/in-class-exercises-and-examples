@@ -5,9 +5,17 @@
 # run the function with some test word lists to see what it is doing
 # then fix it so it has the desired output.
 
+test = ["A", "B", "Boy", "Tree", "D"]
+
+
 def remove_short_words(word_list):
-    for word in word_list:
-        if len(word) < 1:
-            word_list.pop()
+    for i, word in enumerate(word_list):
+        if len(word) <= 1:
+            word_list.remove(i)
+    print(word)
+    print(len(word))
     return word_list
-    
+
+
+print(remove_short_words(test))
+
